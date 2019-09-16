@@ -13,8 +13,9 @@ if (argv.list) {
 }
 
 
-const listSshKeys = () => {
-	exec(`for key in ~/.ssh/id_*; do ssh-keygen -l -f "$\{key}"; done | uniq`, (err, stdout, stderr) => {
+const listSshKeys = () => exec(
+	`for key in ~/.ssh/id_*; do ssh-keygen -l -f "$\{key}"; done | uniq`,
+	(err, stdout, stderr) => {
 		if (err) {
 			console.log(err);
 			return;
@@ -24,7 +25,4 @@ const listSshKeys = () => {
 		}
 
 		console.log(`stdout: ${stdout}`);
-	})
-
-	console.log(argv);
-}
+	});
