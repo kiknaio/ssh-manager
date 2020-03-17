@@ -10,6 +10,6 @@
   "author": "George Kiknadze <g.kiknadze@hotmail.com> (https://kikna.io)",
   "license": "ISC",
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.2"
   }
 }
